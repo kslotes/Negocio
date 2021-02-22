@@ -26,6 +26,9 @@ ul {
   margin: auto;
 }
 
+hr {
+  margin-bottom: 20px;
+}
 
 /* Estilos de navegacion */
 
@@ -34,32 +37,77 @@ ul {
 }
 
 .nav-main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 7;
 }
 
 /* Barra de navegacion */
 
 .nav-main ul {
-    display:flex
+  display: flex;
 }
 .nav-main ul li {
-    padding: 25px;
+  padding: 25px;
 }
 
 .nav-main ul.nav-menu li a:hover {
-    border-bottom: 2px solid #ffffff
+  border-bottom: 2px solid #ffffff;
 }
 
 .nav-main ul.nav-menu {
-    flex: 1;
-    margin-left: 15px;
-    font-size: 20px;
+  flex: 1;
+  margin-left: 15px;
+  font-size: 20px;
 }
 
 .nav-main ul.nav-icon {
-    font-size: 25px;
-    text-decoration: none;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+/* TAB IZQUIERDA  */
+
+.tab-izquierda {
+  float: left;
+  border: 1px solid #ccc;
+  width: 15%;
+  height: 100vmax;
+}
+.tab-izquierda button {
+  display: block;
+  background-color: inherit;
+  color: white;
+  font-size: 20px;
+  padding: 20px 16px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.tab-izquierda button:hover {
+    background-color: #11678f;
+    /* text-decoration: underline; */
+    /* text-underline-offset: 3px; */
+  }
+  
+  /* Create an active/current "tab button" class */
+  .tab-izquierda button.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: 300px;
+  }
+
+.button {
+  cursor: pointer;
 }
