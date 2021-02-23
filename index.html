@@ -1,60 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Limpialita App</title>
     <!-- FONT AWESOME -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p " crossorigin="anonymous" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <!-- STYLES -->
     <link rel="stylesheet" href="/styles.css" />
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <nav class="nav-main">
-        <a href="#">
-          <img
-            href="#"
-            src="./img/logo.png"
-            alt="Limpialita logo"
-            class="nav-logo"
-          />
-        </a>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+</head>
 
-        <ul class="nav-menu">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Productos</a></li>
-          <li><a href="#">Clientes</a></li>
-          <li><a href="#">Reportes</a></li>
-        </ul>
-        <ul class="nav-icon">
-          <li>
-            <a href="#"><i class="fas fa-user"></i></a>
-          </li>
-        </ul>
-      </nav>
-      <hr>
-      <div class="tab-izquierda">
-        <button class="tablinks" onClick='abrirTabla(event, "NuevaVenta")'>
-          Nueva venta
-        </button>
-        <button class="tablinks" onClick='abrirTabla(event, "NuevaCompra")'>
-          Nueva compra
-        </button>
-        <button class="tablinks" onClick='abrirTabla(event, "NuevaCompra")'>
-          #
-        </button>
-      </div>
-    </div>
-  </body>
+<body>
+    <div class="container">
+        <nav class="nav-main">
+            <a href="#">
+                <img href="#" src="./img/logo.png" alt="Limpialita logo" class="nav-logo" />
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Clientes</a></li>
+                <li><a href="#">Reportes</a></li>
+            </ul>
+            <ul class="nav-icon">
+                <li>
+                    <a href="#"><i class="fas fa-user"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <hr />
+        <div class="div-medio">
+            <div class="tab-izquierda">
+                <!-- AGREGAR ICONOS A LOS BOTONES -->
+                <button class="tablinks" onClick='abrirTabla(event, "NuevaVenta")'> Ventas<i class="fas fa-coins fa-lg iconos-tab-izq"></i> </button>
+                <button class="tablinks" onClick='abrirTabla(event, "NuevaCompra")'>Compras </button>
+                <button class="tablinks" onClick='abrirTabla(event, "#")'>#</button>
+                <button class="tablinks" onClick='abrirTabla(event, "#")'>#</button>
+            </div>
+            <div class="linea-izquierda"></div>
+
+            <div class="container-tabla">
+                <input type="text" id="myInput" name="Buscar Productos" onkeyup="funcionBuscarProducto()" placeholder="&#xf5d0; Buscar Productos" />
+                <table id="myTable">
+                    <tr class="header">
+                        <th style="width: 50%">Producto</th>
+                        <th style="width: 25%">Costo</th>
+                        <th style="width: 25%">Precio Venta</th>
+                    </tr>
+                    <tr class='tr-table'>
+                        <td>Jabon Liquido</td>
+                        <td>$50</td>
+                        <td>$65</td>
+                    </tr>
+                    <tr class='tr-table'>
+                        <td>Suavizante Blanco</td>
+                        <td>$10</td>
+                        <td>$20</td>
+                    </tr>
+                    <tr class='tr-table'>
+                        <td>Detergente Base</td>
+                        <td>$100</td>
+                        <td>$140</td>
+                    </tr>
+                    <tr class='tr-table'>
+                        <td>Detergente Magistral</td>
+                        <td>$40</td>
+                        <td>$60</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+</body>
+
+</div>
+
 </html>

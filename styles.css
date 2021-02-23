@@ -1,111 +1,189 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
 body {
-  color: #ffffff;
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .nav-main a {
-  color: #ffffff;
-  text-decoration: none;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 ul {
-  list-style: none;
+    list-style: none;
 }
+
 .container {
-  background-image: linear-gradient(#4295dc, #182c3e);
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  margin: auto;
+    overflow-x: hidden;
+    background-image: linear-gradient(#4295dc, #182c3e);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    margin: auto;
 }
 
 hr {
-  width: 90%;
-  margin: auto;
+    width: 90%;
+    margin: auto;
 }
+
 
 /* Estilos de navegacion */
 
 .nav-logo {
-  width: 70px;
-  margin-left: 40px;
-  margin-right: 40px;
+    width: 70px;
+    margin-left: 60px;
+    margin-right: 40px;
 }
 
 .nav-main {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  align-items: center;
-  margin: auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    margin: auto;
 }
+
 
 /* Barra de navegacion */
 
 .nav-main ul {
-  display: flex;
-}
-.nav-main ul li {
-  padding: 10px 80px;
+    display: flex;
 }
 
-.nav-main ul.nav-menu li a:hover {
-  border-bottom: 2px solid #ffffff;
+.nav-main ul li {
+    padding: 10px 80px;
+    border-radius: 15px;
+    transition: ease-in-out 0.3s;
+}
+
+.nav-main ul.nav-menu li:hover {
+    background-color: #000203c4;
+    border-radius: 15px;
 }
 
 .nav-main ul.nav-menu {
-  flex: 1;
-  margin-left: 15px;
-  font-size: 20px;
+    /* Al achicar la pantalla, tienen que desaparecer las opciones, y aparecer el icono de menu desplegable */
+    flex: 1;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    font-size: 20px;
 }
 
 .nav-main ul.nav-icon {
-  font-size: 25px;
-  text-decoration: none;
+    font-size: 25px;
+    text-decoration: none;
 }
+
+
+/* DIV MEDIO */
+
+.div-medio div {
+    display: flex;
+    flex-direction: column;
+}
+
+.div-medio .linea-izquierda {
+    border-left: 1.5px solid white;
+    height: 50vmax;
+    float: left;
+    width: 1px;
+}
+
+.container-tabla {
+    width: auto;
+}
+
+.div-medio .container-tabla {
+    padding: 2rem 2rem;
+}
+
 
 /* TAB IZQUIERDA  */
 
 .tab-izquierda {
-  position: fixed;
-  width: 170px;
-  height: 100%;
+    float: left;
+    width: 200px;
+    height: 100%;
 }
+
 .tab-izquierda button {
-  background-color: inherit;
-  display: block;
-  color: white;
-  font-size: 20px;
-  padding: 20px 16px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  cursor: pointer;
-  transition: 0.3s;
+    margin-top: 1rem;
+    background-color: inherit;
+    color: white;
+    font-size: 20px;
+    padding: 1.5rem 1rem;
+    width: 100%;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
+
+.iconos-tab-izq {
+    margin-left: 1.2rem;
+}
+
 .tab-izquierda button:hover {
-  background-color: #11678f;
-  /* text-decoration: underline; */
-  /* text-underline-offset: 3px; */
+    background-color: #000203c4;
+    border-radius: 20px;
 }
 
-/* Style the tab content */
-.tabcontent {
-  float: left;
-  padding: 0px 12px;
-  border: 1px solid #ccc;
-  width: 70%;
-  border-left: none;
-  height: 300px;
+
+/* CSS TABLA VENTAS */
+
+#myInput {
+    background-image: url("/css/searchicon.png");
+    background-position: 10px 12px;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    width: 35%;
+    font-size: 16px;
+    padding: 12px 20px 12px 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
 }
 
-.button {
-  cursor: pointer;
+#myTable {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    color: black;
+    font-size: 18px;
+    background-color: white
+}
+
+#myTable th,
+#myTable td {
+    text-align: left;
+    /* Left-align text */
+    padding: 12px;
+    /* Add padding */
+}
+
+#myTable tr td {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header th {
+    padding: 1rem 1rem;
+    color: black;
+}
+
+#myTable tr.header {
+    background-color: rgb(243, 243, 243);
+}
+
+#myTable .tr-table:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: rgb(216, 216, 216);
+    cursor: default;
 }
