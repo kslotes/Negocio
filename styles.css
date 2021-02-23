@@ -4,16 +4,13 @@
   padding: 0;
 }
 body {
-  background: #208ec2;
   color: #ffffff;
-  background-color: #208ec2;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.38' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
 }
 
-a {
+.nav-main a {
   color: #ffffff;
   text-decoration: none;
 }
@@ -22,25 +19,32 @@ ul {
   list-style: none;
 }
 .container {
-  width: 95%;
+  background-image: linear-gradient(#4295dc, #182c3e);
+  position: fixed;
+  height: 100%;
+  width: 100%;
   margin: auto;
 }
 
 hr {
-  margin-bottom: 20px;
+  width: 90%;
+  margin: auto;
 }
 
 /* Estilos de navegacion */
 
 .nav-logo {
-  width: 80px;
+  width: 70px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .nav-main {
   display: flex;
   justify-content: space-between;
+  text-align: center;
   align-items: center;
-  padding: 10px 7;
+  margin: auto;
 }
 
 /* Barra de navegacion */
@@ -49,7 +53,7 @@ hr {
   display: flex;
 }
 .nav-main ul li {
-  padding: 25px;
+  padding: 10px 80px;
 }
 
 .nav-main ul.nav-menu li a:hover {
@@ -70,43 +74,37 @@ hr {
 /* TAB IZQUIERDA  */
 
 .tab-izquierda {
-  float: left;
-  border: 1px solid #ccc;
-  width: 15%;
-  height: 100vmax;
+  position: fixed;
+  width: 170px;
+  height: 100%;
 }
 .tab-izquierda button {
-  display: block;
   background-color: inherit;
+  display: block;
   color: white;
   font-size: 20px;
   padding: 20px 16px;
   width: 100%;
   border: none;
-  text-align: center;
+  text-align: left;
   cursor: pointer;
   transition: 0.3s;
 }
 .tab-izquierda button:hover {
-    background-color: #11678f;
-    /* text-decoration: underline; */
-    /* text-underline-offset: 3px; */
-  }
-  
-  /* Create an active/current "tab button" class */
-  .tab-izquierda button.active {
-    background-color: #ccc;
-  }
-  
-  /* Style the tab content */
-  .tabcontent {
-    float: left;
-    padding: 0px 12px;
-    border: 1px solid #ccc;
-    width: 70%;
-    border-left: none;
-    height: 300px;
-  }
+  background-color: #11678f;
+  /* text-decoration: underline; */
+  /* text-underline-offset: 3px; */
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
 
 .button {
   cursor: pointer;
