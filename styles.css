@@ -1,64 +1,44 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    color: #ffffff;
-    font-family: "Roboto", sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-}
-
-.nav-main a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
 ul {
     list-style: none;
 }
 
 .container {
-    overflow-x: hidden;
     background-image: linear-gradient(#4295dc, #182c3e);
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    margin: auto;
-}
-
-hr {
-    width: 90%;
-    margin: auto;
 }
 
 
 /* Estilos de navegacion */
 
-.nav-logo {
-    width: 70px;
-    margin-left: 60px;
-    margin-right: 40px;
-}
-
-.nav-main {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
-    margin: auto;
-}
-
 
 /* Barra de navegacion */
 
+.nav-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-main a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    align-items: center;
+}
+
+.nav-logo {
+    width: 70px;
+}
+
 .nav-main ul {
     display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .nav-main ul li {
+    align-items: center;
     padding: 10px 80px;
     border-radius: 15px;
     transition: ease-in-out 0.3s;
@@ -69,57 +49,23 @@ hr {
     border-radius: 15px;
 }
 
-.nav-main ul.nav-menu {
-    /* Al achicar la pantalla, tienen que desaparecer las opciones, y aparecer el icono de menu desplegable */
-    flex: 1;
-    flex-wrap: wrap;
-    margin-left: 15px;
-    font-size: 20px;
-}
-
-.nav-main ul.nav-icon {
-    font-size: 25px;
-    text-decoration: none;
-}
-
 
 /* DIV MEDIO */
 
-.div-medio div {
+.div-medio {
     display: flex;
-    flex-direction: column;
-}
-
-.div-medio .linea-izquierda {
-    border-left: 1.5px solid white;
-    height: 50vmax;
-    float: left;
-    width: 1px;
-}
-
-.container-tabla {
-    width: auto;
-}
-
-.div-medio .container-tabla {
-    padding: 2rem 2rem;
 }
 
 
 /* TAB IZQUIERDA  */
 
-.tab-izquierda {
-    float: left;
-    width: 200px;
-    height: 100%;
-}
-
 .tab-izquierda button {
+    padding: 0.5rem;
+    margin-left: 0px;
     margin-top: 1rem;
     background-color: inherit;
     color: white;
     font-size: 20px;
-    padding: 1.5rem 1rem;
     width: 100%;
     border: none;
     text-align: center;
@@ -179,7 +125,7 @@ hr {
 }
 
 #myTable tr.header {
-    background-color: rgb(243, 243, 243);
+    background-color: rgb(231, 231, 231);
 }
 
 #myTable .tr-table:hover {

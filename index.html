@@ -8,9 +8,11 @@
     <title>Limpialita App</title>
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p " crossorigin="anonymous" />
-
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <!-- STYLES -->
     <link rel="stylesheet" href="/styles.css" />
     <!-- FONTS -->
@@ -19,12 +21,11 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container col-sm-12">
         <nav class="nav-main">
             <a href="#">
                 <img href="#" src="./img/logo.png" alt="Limpialita logo" class="nav-logo" />
             </a>
-
             <ul class="nav-menu">
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Productos</a></li>
@@ -38,17 +39,16 @@
             </ul>
         </nav>
         <hr />
-        <div class="div-medio">
-            <div class="tab-izquierda">
+        <div class="div-medio col-12">
+            <div class="tab-izquierda col-2">
                 <!-- AGREGAR ICONOS A LOS BOTONES -->
                 <button class="tablinks" onClick='abrirTabla(event, "NuevaVenta")'> Ventas<i class="fas fa-coins fa-lg iconos-tab-izq"></i> </button>
                 <button class="tablinks" onClick='abrirTabla(event, "NuevaCompra")'>Compras </button>
                 <button class="tablinks" onClick='abrirTabla(event, "#")'>#</button>
                 <button class="tablinks" onClick='abrirTabla(event, "#")'>#</button>
             </div>
-            <div class="linea-izquierda"></div>
 
-            <div class="container-tabla">
+            <div class="col-9">
                 <input type="text" id="myInput" name="Buscar Productos" onkeyup="funcionBuscarProducto()" placeholder="&#xf5d0; Buscar Productos" />
                 <table id="myTable">
                     <tr class="header">
@@ -79,6 +79,7 @@
                 </table>
             </div>
         </div>
+    </div>
 </body>
 
 </div>
